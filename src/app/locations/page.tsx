@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { LocationCard } from "@/components/cards/LocationCard";
 import { FinalCta } from "@/components/home/FinalCta";
+import { LocationsDirectory } from "@/components/locations/LocationsDirectory";
 import { PageHero } from "@/components/page/PageHero";
 import { FaqSection } from "@/components/ui/FaqSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -77,45 +77,7 @@ export default function LocationsPage() {
             ))}
           </div>
 
-          <div className="mt-16">
-            <h2 className="text-2xl font-semibold sm:text-[1.7rem]">
-              Browse all localities
-            </h2>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {cities.map((city) => (
-                <div
-                  key={city.slug}
-                  className="rounded-2xl border border-navy-100 bg-cream/60 p-5"
-                >
-                  <Link
-                    href={`/locations/${city.slug}`}
-                    className="text-sm font-extrabold text-navy-900 hover:text-gold-700"
-                  >
-                    {city.name}
-                  </Link>
-                  {city.areas.length > 0 ? (
-                    <ul className="mt-3 space-y-2">
-                      {city.areas.map((area) => (
-                        <li key={area.slug}>
-                          <Link
-                            href={`/locations/${city.slug}/${area.slug}`}
-                            className="text-[13px] font-semibold text-navy-700 transition hover:text-gold-700"
-                          >
-                            Home tuition in {area.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="mt-2 text-[13px] leading-relaxed text-muted">
-                      City-wide coverage, including Greater Noida West. Contact
-                      us with your sector or society.
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
+          <LocationsDirectory cities={cities} totalAreas={totalAreas} />
         </div>
       </section>
 

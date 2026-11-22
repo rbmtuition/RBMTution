@@ -42,7 +42,13 @@ export function Footer() {
               </span>
               <span className="leading-none">
                 <span className="block font-display text-[1.35rem] font-semibold text-white">
-                  RBM <span className="text-gold-400">Tuition</span>
+                  RBM{" "}
+                  <span className="text-gold-400">
+                    Tuition
+                    <sup className="ml-0.5 align-super text-[0.45em] font-semibold">
+                      ™
+                    </sup>
+                  </span>
                 </span>
                 <span className="mt-1 block text-[9px] font-extrabold tracking-[0.16em] text-navy-300 uppercase">
                   Right teacher. Bright future.

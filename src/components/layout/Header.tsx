@@ -253,7 +253,13 @@ export function Header() {
               ) : (
                 <>
                   <span className="block font-display text-[1.35rem] font-semibold tracking-tight text-navy-900">
-                    RBM <span className="text-gold-600">Tuition</span>
+                    RBM{" "}
+                    <span className="text-gold-600">
+                      Tuition
+                      <sup className="ml-0.5 align-super text-[0.45em] font-semibold">
+                        ™
+                      </sup>
+                    </span>
                   </span>
                   <span className="mt-1 block text-[9px] font-extrabold tracking-[0.16em] text-muted uppercase">
                     Delhi NCR · Home &amp; Online
@@ -543,7 +549,13 @@ export function Header() {
                   </span>
                 ) : (
                   <span className="font-display text-xl font-semibold text-navy-900">
-                    RBM <span className="text-gold-600">Tuition</span>
+                    RBM{" "}
+                    <span className="text-gold-600">
+                      Tuition
+                      <sup className="ml-0.5 align-super text-[0.45em] font-semibold">
+                        ™
+                      </sup>
+                    </span>
                   </span>
                 )}
               </Link>
